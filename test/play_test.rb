@@ -1,8 +1,10 @@
 require 'minitest/autorun'
 require 'minitest/pride'
 require './lib/play'
+require 'pry'
 
 class PlayTest < Minitest::Test
+
   def test_play_class_exists
     play = Play.new
     assert_instance_of Play, play
