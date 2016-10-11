@@ -1,11 +1,9 @@
-require 'pry'
 class CodeMaker
-  def four_color_combination
-    make_color_combination
+  attr_reader :color_combination
+  def initialize
+    @color_combination = color_combination
   end
-
-private
-  def make_color_combination
+  def four_color_combination
     combination = []
     1.times do rand(3)
       combination.push('y') if 0
