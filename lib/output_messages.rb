@@ -21,11 +21,12 @@ module OutputMessages
   end
 
   def new_game
-    puts "\tI have generated a beginner sequence with four elements made up of: (r)ed,
-    \t(g)reen, (b)lue, and (y)ellow. Use (q)uit at any time to end the game."
+    puts "I have generated a beginner sequence with four elements made up of: (r)ed,
+    (g)reen, (b)lue, and (y)ellow.\nUse (q)uit at any time to end the game."
   end
 
   def prompt_to_guess
     puts "Guess the secret code as many times as you'd like. Should you get bored, you can (c)heat."
+    print "Enter guess: "
   end
 end

@@ -1,5 +1,5 @@
 require './lib/output_messages'
-require './lib/play'
+require './lib/game_flow'
 require 'pry'
 class Repl
   include OutputMessages
@@ -10,8 +10,9 @@ class Repl
       if choice == "i" || choice == "instructions"
         OutputMessages.instructions
       elsif choice == "p" || choice == "play"
-        Play.new
         OutputMessages.new_game
+        OutputMessages.prompt_to_guess
+        GameFlow.new.guess_the_code
       else
         puts "invalid choice"
       end
