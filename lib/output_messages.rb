@@ -32,19 +32,20 @@ module OutputMessages
   end
 
   def game_in_progress(guess, number_of_correct_elements, number_of_correct_positions, guess_count)
-    # binding.pry
     if guess.length > 4
       puts "guess is too long"
     elsif guess.length < 4
       puts "guess is too short"
     else
-      puts "#{guess.upcase} has #{number_of_correct_elements} correct number of colors
-      with #{number_of_correct_positions} in the correct positions. You've taken #{guess_count} guess."
+      puts "#{guess.upcase} has #{number_of_correct_elements} correct number of colors with #{number_of_correct_positions} in the correct positions. You've taken #{guess_count} guess."
     end
   end
 
-  def finished_game(guess_count, guess, seconds)
-    puts "Congratulations! You guessed the sequence #{guess.upcase} in #{guess_count} guesses over #{seconds} seconds.
+  def finished_game(guess_count, guess, start_time)
+    stop_time = Time.new
+    minutes = stop_time.min - start_time.min
+    seconds = stop_time.sec - start_time.sec
+    puts "Congratulations! You guessed the sequence #{guess.upcase} in #{guess_count} guesses over #{minutes} minutes and #{seconds} seconds.
     Do you want to (p)lay again or (q)uit?"
   end
 end
