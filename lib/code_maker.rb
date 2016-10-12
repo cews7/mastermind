@@ -1,8 +1,9 @@
 class CodeMaker
-  attr_reader :color_combination
-  def initialize
-    @color_combination = color_combination
-  end
+  # attr_reader :color_combination
+  # def initialize
+  #   @color_combination = color_combination
+  # end
+
   def four_color_combination
     combination = []
     1.times do rand(3)
