@@ -1,7 +1,6 @@
 require 'minitest/autorun'
 require 'minitest/pride'
 require './lib/output_messages'
-require 'pry'
 
 class OutputMessagesTest < Minitest::Test
   def setup
