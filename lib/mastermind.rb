@@ -70,4 +70,4 @@ class Mastermind
     end_game
   end
 end
-# Mastermind.new.start_game
+Mastermind.new.start_game

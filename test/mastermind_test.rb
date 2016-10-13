@@ -1,7 +1,6 @@
 require 'minitest/autorun'
 require 'minitest/pride'
 require './lib/mastermind'
-
 class MastermindTest < Minitest::Test
   def test_game_flow_class_exists
     game = Mastermind.new
