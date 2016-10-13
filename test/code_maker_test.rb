@@ -6,7 +6,6 @@ class CodeMakerTest < Minitest::Test
     code = CodeMaker.new
     colors = code.four_color_combination
     assert_equal 4, colors.size
-    refute colors.include?('1234567890')
-    assert colors.include?('y' || 'b' || 'g' || 'r')
+    colors.each_char { |letter| assert "ybgr".include?(letter) }
   end
 end

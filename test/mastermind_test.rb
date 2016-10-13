@@ -7,17 +7,11 @@ class MastermindTest < Minitest::Test
     assert_instance_of Mastermind, game
   end
 
-  def test_number_of_correct_colors
+  def test_number_of_correct_colors_and_positions
     t = Mastermind.new
     t.code = 'yyyy'
     t.guess = 'ryry'
     assert_equal 1, t.number_of_correct_colors(t.code, t.guess)
-  end
-
-  def test_number_of_correct_positions
-    t = Mastermind.new
-    t.code = 'yyyy'
-    t.guess = 'yryr'
     assert_equal 2, t.number_of_correct_positions(t.code, t.guess)
   end
 
