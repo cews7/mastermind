@@ -1,7 +1,6 @@
 require 'minitest/autorun'
 require 'minitest/pride'
 require './lib/code_maker'
-require 'pry'
 class CodeMakerTest < Minitest::Test
   def test_code_maker_works
     code = CodeMaker.new
