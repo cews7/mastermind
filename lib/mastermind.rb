@@ -19,7 +19,6 @@ class Mastermind
     until input == "q" || input == "quit"
       OutputMessages.instructions if input == "i" || input == "instructions"
       OutputMessages.new_game if input == "p" || input == "play"
-      OutputMessages.prompt_to_guess if input == "p" || input == "play"
       guess_the_code if input == "p" || input == "play"
       puts "invalid input" if input.start_with?("p", "i", "q") == false
       input = gets.chomp.downcase
@@ -28,7 +27,6 @@ class Mastermind
   end
 
   def guess_the_code
-    print "Enter guess: "
     @guess = gets.chomp.downcase
     complete_round if guess == code
     puts "the code is: #{code.upcase}" if guess == "c" || guess == "cheat"

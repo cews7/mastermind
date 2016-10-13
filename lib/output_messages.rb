@@ -18,11 +18,7 @@ module OutputMessages
   end
 
   def new_game
-    puts "I have generated a beginner sequence with four elements made up of: (r)ed, (g)reen, (b)lue, and (y)ellow.\nUse (q)uit at any time to end the game.\n"
-  end
-
-  def prompt_to_guess
-    puts "\nGuess the secret code as many times as you'd like. Should you get bored, you can (c)heat."
+    puts "I have generated a beginner sequence with four elements made up of: (r)ed, (g)reen, (b)lue, and (y)ellow.\nUse (q)uit at any time to end the game.\nWhat's your guess?"
   end
 
   def game_in_progress(guess, number_of_correct_colors, number_of_correct_positions, guess_count)
